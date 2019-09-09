@@ -1,29 +1,4 @@
-# doggie_world
+# 狗子世界
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## 小组成员:
+丁剑晖, 刘小聪, 庞增意, 崔广辉, 苏伟龙
