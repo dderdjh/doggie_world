@@ -2,8 +2,11 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 
-Vue.use(Router)
 
+//############组件临时测试区##############
+import Swipe from "./components/Swipe.vue"
+//#######################################
+Vue.use(Router)
 export default new Router({
   routes: [
     {
@@ -11,6 +14,11 @@ export default new Router({
       name: 'home',
       component: Home
     },
+    {
+      path: "/Swipe",
+      name: "swipe",
+      component: Swipe
+    }
     
   ]
 })
