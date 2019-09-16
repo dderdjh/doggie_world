@@ -2,13 +2,16 @@
   <div class="swipeWrap">
     <mt-swipe :auto="3000">
       <mt-swipe-item>
-        <img src="../assets/img/ease_chat_face_normal.png" >
+        <img src="../assets/img/banner1.png" >
       </mt-swipe-item>
       <mt-swipe-item>
-        <img src="../assets/img/__picker_ic_photo_black_48dp.png" >
+        <img src="../assets/img/banner2.png" >
       </mt-swipe-item>
       <mt-swipe-item>
-        <img src="../assets/img/ic_buy_notice.png" >
+        <img src="../assets/img/banner3.png" >
+      </mt-swipe-item>
+      <mt-swipe-item>
+        <img src="../assets/img/banner4.png" >
       </mt-swipe-item>
     </mt-swipe>
   </div>
@@ -16,6 +19,10 @@
 <style scoped>
   .swipeWrap{
     width: 100%;
+    height:179px;
+  }
+  .swipeWrap img{
+    width:100%;
     height:200px;
   }
 </style>
