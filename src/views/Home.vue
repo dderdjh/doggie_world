@@ -2,6 +2,7 @@
   <div class="home">
     <h1>{{tit}}</h1>
     <button @click="change">嗯</button>
+    
   </div>
 </template>
 
