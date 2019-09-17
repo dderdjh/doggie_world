@@ -18,8 +18,8 @@
       </mt-tab-item>
       <mt-tab-item id="shop_mall" @click.native="changeStage(2)">
         <tabbaricon
-          :selectedImage="require('../../assets/img/ic_tab_mall_normal.png')"
-          :normalImage="require('../../assets/img/ic_tab_mall_pressed.png')"
+          :selectedImage="require('../../assets/img/ic_tab_mall_pressed.png')"
+          :normalImage="require('../../assets/img/ic_tab_mall_normal.png')"
           :focused="currentIndex[2].isSelect"
         ></tabbaricon>商城
       </mt-tab-item>

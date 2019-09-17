@@ -20,6 +20,7 @@
   .swipeWrap{
     width: 100%;
     height:179px;
+    margin-top:8px;
   }
   .swipeWrap img{
     width:100%;

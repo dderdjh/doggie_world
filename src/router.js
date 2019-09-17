@@ -4,6 +4,7 @@ import Home from './views/Home.vue'
 import Search from "./components/common/Search.vue"
 import Navigator from "./components/common/Navigator.vue"
 import FooterBar from "./components/common/FooterBar.vue"
+import Mine from "./components/common/Mine.vue"
 
 
 //############组件临时测试区##############
@@ -15,6 +16,7 @@ export default new Router({
     {path:`/Search`,component:Search},
     {path:`/Navigator`,component:Navigator},
     {path:`/FooterBar`,component:FooterBar},
+    {path:`/Mine`,component:Mine},
     {
       path: '/',
       name: 'home',

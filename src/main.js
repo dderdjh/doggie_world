@@ -21,18 +21,6 @@ import Vuex from "vuex";
 // 注册实例
 Vue.use(Vuex)
 
-<<<<<<< HEAD
-=======
-//Mint UI 
-import MintUI from "mint-ui"
-import "mint-ui/lib/style.css"
-
-//Axios
-import axios from "axios"
-axios.defaults.withCredentials = true;
-axios.defaults.baseURL = "http://127.0.0.1:8080/";
-Vue.prototype.axios = axios;
->>>>>>> a6baf39c38c6205d9e148aa77cfcdac7a24c1aa3
 
 Vue.config.productionTip = false
 Vue.use(MintUI);
