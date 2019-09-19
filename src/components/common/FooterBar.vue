@@ -44,14 +44,15 @@
 import TabBarIcon from "./TabBarIcon"
 export default {
     data(){
-        return{active:"homepage",
-        currentIndex:[
+        return{
+          active:"homepage",
+          currentIndex:[
             {isSelect:true},
             {isSelect:false},
             {isSelect:false},
             {isSelect:false},
             {isSelect:false}
-        ]
+          ]
         }
     },
     methods: {

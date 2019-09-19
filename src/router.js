@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
+import Login from './views/Login.vue'
 import Search from "./components/common/Search.vue"
 import Navigator from "./components/common/Navigator.vue"
 import FooterBar from "./components/common/FooterBar.vue"
@@ -23,6 +24,10 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home
+    },
+	  {
+      path:"/Login",
+      component:Login
     },
     {
       path: "/Swipe",
