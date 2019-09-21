@@ -1,34 +1,58 @@
 <template>
   <div>
     <div class="title1"><h4>活跃商家</h4></div>
+    <div class="container">
     <div class="container1">
-        <div class="profile-img">
-            <img src="../../assets/img/ic_error.png" alt="" style="width:50px;">
-        </div>
+            <img src="../../assets/img/ic_error.png" alt="" class="profile-img">
          <span class="storeName">广宠旗舰店纯种宠物名猫俱乐部</span>
     </div>
-    <div class="navigator_1">
-      <a href>
-        <img src="../../assets/img/ic_home_hot.png" alt style="width:80px;height:15px" />
-      </a>
-      <a>蔚县鑫龙良犬养殖 特价阿拉斯加￥...</a>
-      <a href>更多&gt;</a>
+    <div class="container1">
+            <img src="../../assets/img/ic_error.png" alt="" class="profile-img">
+         <span class="storeName">广宠旗舰店纯种宠物名猫俱乐部</span>
+    </div>
+    <div class="container1">
+            <img src="../../assets/img/ic_error.png" alt="" class="profile-img">
+         <span class="storeName">广宠旗舰店纯种宠物名猫俱乐部</span>
+    </div>
+    <div class="container1">
+            <img src="../../assets/img/ic_error.png" alt="" class="profile-img">
+         <span class="storeName">广宠旗舰店纯种宠物名猫俱乐部</span>
+    </div>
+    <div class="container1">
+            <img src="../../assets/img/ic_error.png" alt="" class="profile-img">
+         <span class="storeName">广宠旗舰店纯种宠物名猫俱乐部</span>
+    </div>
+    </div>
+    <div class="title1"><h4>信用优选商家</h4></div>
+    <div class="products">
+      <img class="profile-img" src="../../assets/img/ic_error.png" alt="">
+      <div>
+        <span>精品萌宠30天售后保障犬舍支持担保交易</span>
+        <span>广东广州天河区天河</span>
+        <span>在售244只 担保交易68只</span>
+      </div>
+      <div></div>
     </div>
   </div>
 </template>
 <style scoped>
     .title1{
         clear: both;
-        border-bottom: 1px solid #cccccc;
+        border-bottom: 1px solid #dddddd;
     }
     .title1 h4{
         color: #666;
         line-height:20px;
     }
+    .container{
+      display: flex;
+      justify-content: space-around;
+      border-bottom: 3px solid #dddddd;
+    }
     .container1{
         width: 80px;
         height: 80px;
-        
+        text-align: center;
     }
     .storeName{
        display: block; 
@@ -36,7 +60,7 @@
        font-size:12px;
        overflow: hidden;
        text-overflow: ellipsis;
-        white-space: nowrap;
+       white-space: nowrap;
        
     }
     .profile-img{
@@ -49,13 +73,12 @@
         margin-top: 10px;
         
     }
-    .navigator_1{
+    .products{
       display: flex;
-      justify-content: space-between;
-      height: 50px;
-      line-height: 50px;
-  }
-  .navigator_1 a{
-      text-decoration: none;
-  }
+      font-size: 12px; 
+    }
+     .products span{
+       display: block;
+       margin-top: 8px;
+     }
 </style>
