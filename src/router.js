@@ -7,6 +7,7 @@ import Navigator from "./components/common/Navigator.vue"
 import FooterBar from "./components/common/FooterBar.vue"
 import Mine from "./components/common/Mine.vue"
 import Store from "./components/common/Store.vue"
+import Product from "./components/common/Product.vue"
 
 
 //############组件临时测试区##############
@@ -20,6 +21,7 @@ export default new Router({
     {path:`/FooterBar`,component:FooterBar},
     {path:`/Mine`,component:Mine},
     {path:`/Store`,component:Store},
+    {path:`/product`,component:Product},
     {
       path: '/',
       name: 'home',
