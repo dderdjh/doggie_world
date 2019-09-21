@@ -1,6 +1,7 @@
 <template>
 	<div id="app">			
 		<div v-if="cut_lg==1" >
+			<!-- 快捷登陆页面 -->
 			<div class="quick_login">
 				<img src="../assets/img/common_back.png" >
 				<h3>快捷登陆</h3>
@@ -8,13 +9,15 @@
 			<div class="login_verify">
 				<div class="phone_input">
 					 手&nbsp;&nbsp;&nbsp;机 :
-					 <input type="text" placeholder="请输入手机号"/>
+					 <input type="text" placeholder="请输入手机号" v-model="code_phone"/>
+					 <span v-show="err_hint">手机号输入有误！</span>
 				</div>
 				<hr>
 				<div class="code_input">
 					验证码 :
-					<input type="text" placeholder="请输入验证码"/>
-					<a href="">获取验证码</a>
+					<input type="text" placeholder="请输入验证码"  />
+					<a href="javascript:;" @click="get_auth_code" v-if="code">获取验证码</a>
+					<a href="javascript:;" v-else>{{timer}}s后重新获取</a>
 				</div>
 				
 			</div>
@@ -54,13 +57,14 @@
 			<div class="login_verify">
 				<div class="phone_input">
 					 手&nbsp;&nbsp;&nbsp;机 :
-					 <input type="text" placeholder="请输入手机号"/>
+					 <input type="text" placeholder="请输入手机号" v-model="code_phone"/>
 				</div>
 				<hr>
 				<div class="code_input">
 					验证码 :
 					<input type="text" placeholder="请输入验证码"/>
-					<a href="">获取验证码</a>
+					<a href="" @touchend="get_auth_code" v-if="code">获取验证码</a>
+					<a href="javascript:;" v-else>{{timer}}s后重新获取</a>
 				</div>
 				
 			</div>
@@ -83,6 +87,7 @@
 				<img src="../assets/img/short_cut_alipay_login.png">
 			</div>
 		</div>
+		<!-- 用户点击获取不到验证码时的提示 -->
 		<div class="not_get_verify" v-show="hint_show" >
 				<div >
 					<h3>收不到验证码 ?</h3>
@@ -102,7 +107,11 @@
 		data(){
 			return {
 				hint_show:false,
-				cut_lg:1
+				cut_lg:1,
+				timer:60,
+				code:true,
+				code_phone:'',
+				err_hint:false
 			}	
 		},
 		methods:{
@@ -113,6 +122,7 @@
 					this.hint_show = false
 				}
 			},
+			
 			forget_pwd(){
 				if(this.cut_lg == 2){
 					this.cut_lg = 3
@@ -126,7 +136,28 @@
 				}else{
 					this.cut_lg = 1
 				}
+			},
+			get_auth_code(){
+				if( /^1[3-9]\d{9}$/.test(this.code_phone) == true ){
+					this.err_hint = false
+					if(this.timer==60){
+						this.code = false;
+						this.timer = 59;
+						var n = setInterval(()=>{
+							this.timer--;
+							if(this.timer ==0){
+								clearInterval(n)
+								this.code = true;
+								this.timer = 60;
+							}
+						},1000)
+					}
+				}else{
+					this.err_hint = true
+				}
+				
 			}
+
 		}
 	}
 </script>
@@ -169,6 +200,11 @@
 		line-height: 3.2rem;
 		margin-left: 0.5rem;
 	}
+	.login_verify .phone_input span{
+		font-size: 0.8rem;
+		color: red;
+		font-weight: 600
+	}
 	.login_verify .code_input{
 		height: 3rem;
 		line-height: 2rem;
@@ -178,16 +214,18 @@
 		margin-left: 1rem;
 		caret-color: red;
 	}
+	
 	.login_verify a{
 		float:right;
 		background:#CACACA;
 		color: #FF4500;
 		border-radius: 0.3125rem;
-		font-size: 0.92rem;
+		font-size: 0.8rem;
 		width: 5.5rem;
 		text-align: center;
 		margin-right: 0.5rem;
 	}
+
 	.login_verify hr{
 		border:0.05rem solid #F0F0F0;
 	}
