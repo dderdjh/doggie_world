@@ -1,12 +1,12 @@
 <template>
     <div>
-        <div class="header">
+        <div class="header" >
             <h2>我的</h2><img src="../../assets/img/set.png" alt="" style="width:40px;height:40px;">
         </div>
         <div class="tabar">
-            <div class="circle"></div>
+            <div class="circle" @click="toLogin"></div>
             <div class="circle_r">
-                <h2 class="c_login">点击头像登录</h2>
+                <h2 class="c_login" @click="toLogin">点击头像登录</h2>
                 <span class="desc">宠物市场购宠、售宠专业有保障</span>
             </div>
         </div>
@@ -52,6 +52,15 @@
         </div>
     </div>
 </template>
+<script>
+export default {
+    methods:{
+        toLogin(){
+            this.$router.push("Login");
+        }
+    }
+}
+</script>
 <style scoped>
     .header{
         display: flex;
