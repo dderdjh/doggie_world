@@ -2,30 +2,26 @@
     <div>
     <div class="s-head">
        <div class="area" >
-         <div class="btn" @click="toggle()">广州<div class="triangle"></div></div>
-         <div v-show="isShow" class="a_container">广州</div> 
+         <div class="btn" @click="toggle">广州<div class="triangle"></div></div>
+         <div v-show="is_Show" class="a_container">广州</div> 
         </div> 
        <div class="area">
-         <div class="btn" @click="toggle()">资质<div class="triangle"></div></div> 
-         <div v-show="isShow">
-             <ul style="list-style-type: none">
+         <div class="btn" @click="toggle1">资质<div class="triangle"></div></div> 
+             <ul class="display" style="list-style-type: none" v-show="is_Show1" >
              <li><a>不限</a></li>
              <li><a>实名验证</a></li>
              <li><a>商家验证</a></li>
              <li><a>平台验证</a></li>
              </ul>
-         </div>
         </div> 
        <div class="area">
-         <div class="btn"  @click="toggle()">信誉<div class="triangle"></div>
+         <div class="btn"  @click="toggle2">信誉<div class="triangle"></div>
          </div>
-          <div v-show="isShow">
-             <ul  style="list-style-type: none">
+             <ul  style="list-style-type: none" v-show="is_Show2">
              <li><a>不限</a></li>
              <li><a>交易量</a></li>
              <li><a>好评数</a></li>
              </ul>
-         </div> 
         </div> 
     </div>
     
@@ -35,13 +31,36 @@
 export default {
     data() {
         return {
-            isShow:false
+            is_Show:false,
+            is_Show1:false,
+            is_Show2:false,
         }
     },
     methods: {
-        toggel:function(){
-            this.isShow=!this.isShow
-        }
+        toggle(){
+            if(this.is_Show == false){
+                this.is_Show = true
+            }else{
+                this.is_Show = false
+            }
+        
+        },
+        toggle1(){
+            if(this.is_Show1 == false){
+                this.is_Show1 = true
+            }else{
+                this.is_Show1 = false
+            }
+        
+        },
+        toggle2(){
+            if(this.is_Show2 == false){
+                this.is_Show2 = true
+            }else{
+                this.is_Show2 = false
+            }
+        
+        },
     },
 }
 </script>
@@ -50,11 +69,14 @@ export default {
         display: flex;
         justify-content: space-around;
        border-bottom: 1px solid #ccc;
+       
     }
     .btn{
         border:0px;
         background: none;
         line-height: 50px;
+        z-index: 10
+       
     }   
     .triangle{
         width:0;

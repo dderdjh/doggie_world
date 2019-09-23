@@ -3,7 +3,7 @@
 		<div v-if="cut_lg==1" >
 			<!-- 快捷登陆页面 -->
 			<div class="quick_login">
-				<img src="../assets/img/common_back.png" >
+				<img src="../assets/img/common_back.png" @click="back">
 				<h3>快捷登陆</h3>
 			</div>	
 			<div class="login_verify">
@@ -115,6 +115,9 @@
 			}	
 		},
 		methods:{
+			back(){
+				this.$router.push("/")
+			},
 			verify_hint(){
 				if(this.hint_show == false){
 					this.hint_show = true
