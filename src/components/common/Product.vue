@@ -22,6 +22,22 @@
             <img src="../../assets/img/ic_error.png" alt="" class="profile-img">
          <span class="storeName">广宠旗舰店纯种宠物名猫俱乐部</span>
     </div>
+    <div class="container1">
+            <img src="../../assets/img/ic_error.png" alt="" class="profile-img">
+         <span class="storeName">广宠旗舰店纯种宠物名猫俱乐部</span>
+    </div>
+    <div class="container1">
+            <img src="../../assets/img/ic_error.png" alt="" class="profile-img">
+         <span class="storeName">广宠旗舰店纯种宠物名猫俱乐部</span>
+    </div>
+    <div class="container1">
+            <img src="../../assets/img/ic_error.png" alt="" class="profile-img">
+         <span class="storeName">广宠旗舰店纯种宠物名猫俱乐部</span>
+    </div>
+    <div class="container1">
+            <img src="../../assets/img/ic_error.png" alt="" class="profile-img">
+         <span class="storeName">广宠旗舰店纯种宠物名猫俱乐部</span>
+    </div>
     </div>
     <div class="title1"><h4>信用优选商家</h4></div>
     <div class="products">
@@ -45,14 +61,20 @@
         line-height:20px;
     }
     .container{
+      width: 100%;
       display: flex;
       justify-content: space-around;
+      overflow: hidden;
+      overflow: auto;
       border-bottom: 3px solid #dddddd;
+      
     }
+    div::-webkit-scrollbar {display: none;    /* 隐藏滚动条 */}
     .container1{
         width: 80px;
         height: 80px;
         text-align: center;
+      
     }
     .storeName{
        display: block; 
@@ -65,8 +87,8 @@
     }
     .profile-img{
         clear: both;
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
         border-radius: 50%;
         overflow: hidden;
         background: pink;
