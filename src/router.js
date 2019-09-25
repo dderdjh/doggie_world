@@ -11,6 +11,7 @@ import Product from "./components/common/Product.vue"
 import Rate from "./components/common/Rate.vue"
 
 
+
 //############组件临时测试区##############
 import Swipe from "./components/Swipe.vue"
 //#######################################

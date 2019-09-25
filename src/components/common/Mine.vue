@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div style="overflow:auto">
         <div class="header" >
             <h2>我的</h2><img src="../../assets/img/set.png" alt="" style="width:40px;height:40px;">
         </div>
