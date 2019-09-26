@@ -9,6 +9,7 @@ import Mine from "./components/common/Mine.vue"
 import Store from "./components/common/Store.vue"
 import Product from "./components/common/Product.vue"
 import Rate from "./components/common/Rate.vue"
+import Commodity from "./components/Commodity.vue"
 
 
 //############组件临时测试区##############
@@ -38,7 +39,11 @@ export default new Router({
       path: "/Swipe",
       name: "swipe",
       component: Swipe
-    }
-    
+    },
+    {
+      path:"/Commodity",
+      name:"commodity",
+      component:Commodity
+    },
   ]
 })
