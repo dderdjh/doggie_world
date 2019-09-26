@@ -71,6 +71,130 @@
           <span style="margin-left:8%;">23天前</span>
       </div>
     </div>
+     <div class="products">
+      <img class="profile-img" src="../../assets/img/ic_error.png" alt="">
+      <div>
+        <span>精品萌宠30天售后保障犬舍支持担保交易</span>
+        <span>广东广州天河区天河</span>
+        <span>在售244只 担保交易68只</span>
+      </div>
+      <div>
+        <rate></rate>
+      </div>
+    </div>
+    <div class="shopper">
+      <div class="product_1">
+          <img src="../../assets/img/push.png" alt=""><br>
+          <span><strong>金毛</strong></span><br>
+          <span>￥1500</span>
+          <span style="margin-left:8%;">23天前</span>
+      </div>
+      <div class="product_1">
+          <img src="../../assets/img/push.png" alt=""><br>
+          <span><strong>金毛</strong></span><br>
+          <span>￥1500</span>
+          <span style="margin-left:8%;">23天前</span>
+      </div>
+      <div class="product_1">
+          <img src="../../assets/img/push.png" alt=""><br>
+          <span><strong>金毛</strong></span><br>
+          <span>￥1500</span>
+          <span style="margin-left:8%;">23天前</span>
+      </div>
+    </div>
+     <div class="products">
+      <img class="profile-img" src="../../assets/img/ic_error.png" alt="">
+      <div>
+        <span>精品萌宠30天售后保障犬舍支持担保交易</span>
+        <span>广东广州天河区天河</span>
+        <span>在售244只 担保交易68只</span>
+      </div>
+      <div>
+        <rate></rate>
+      </div>
+    </div>
+    <div class="shopper">
+      <div class="product_1">
+          <img src="../../assets/img/push.png" alt=""><br>
+          <span><strong>金毛</strong></span><br>
+          <span>￥1500</span>
+          <span style="margin-left:8%;">23天前</span>
+      </div>
+      <div class="product_1">
+          <img src="../../assets/img/push.png" alt=""><br>
+          <span><strong>金毛</strong></span><br>
+          <span>￥1500</span>
+          <span style="margin-left:8%;">23天前</span>
+      </div>
+      <div class="product_1">
+          <img src="../../assets/img/push.png" alt=""><br>
+          <span><strong>金毛</strong></span><br>
+          <span>￥1500</span>
+          <span style="margin-left:8%;">23天前</span>
+      </div>
+    </div>
+     <div class="products">
+      <img class="profile-img" src="../../assets/img/ic_error.png" alt="">
+      <div>
+        <span>精品萌宠30天售后保障犬舍支持担保交易</span>
+        <span>广东广州天河区天河</span>
+        <span>在售244只 担保交易68只</span>
+      </div>
+      <div>
+        <rate></rate>
+      </div>
+    </div>
+    <div class="shopper">
+      <div class="product_1">
+          <img src="../../assets/img/push.png" alt=""><br>
+          <span><strong>金毛</strong></span><br>
+          <span>￥1500</span>
+          <span style="margin-left:8%;">23天前</span>
+      </div>
+      <div class="product_1">
+          <img src="../../assets/img/push.png" alt=""><br>
+          <span><strong>金毛</strong></span><br>
+          <span>￥1500</span>
+          <span style="margin-left:8%;">23天前</span>
+      </div>
+      <div class="product_1">
+          <img src="../../assets/img/push.png" alt=""><br>
+          <span><strong>金毛</strong></span><br>
+          <span>￥1500</span>
+          <span style="margin-left:8%;">23天前</span>
+      </div>
+    </div>
+     <div class="products">
+      <img class="profile-img" src="../../assets/img/ic_error.png" alt="">
+      <div>
+        <span>精品萌宠30天售后保障犬舍支持担保交易</span>
+        <span>广东广州天河区天河</span>
+        <span>在售244只 担保交易68只</span>
+      </div>
+      <div>
+        <rate></rate>
+      </div>
+    </div>
+    <div class="shopper">
+      <div class="product_1">
+          <img src="../../assets/img/push.png" alt=""><br>
+          <span><strong>金毛</strong></span><br>
+          <span>￥1500</span>
+          <span style="margin-left:8%;">23天前</span>
+      </div>
+      <div class="product_1">
+          <img src="../../assets/img/push.png" alt=""><br>
+          <span><strong>金毛</strong></span><br>
+          <span>￥1500</span>
+          <span style="margin-left:8%;">23天前</span>
+      </div>
+      <div class="product_1">
+          <img src="../../assets/img/push.png" alt=""><br>
+          <span><strong>金毛</strong></span><br>
+          <span>￥1500</span>
+          <span style="margin-left:8%;">23天前</span>
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -96,9 +220,16 @@ export default {
       justify-content: space-between;
       overflow: hidden;
       overflow: auto;
-      border-bottom: 3px solid #dddddd;
-      
+      border-bottom: 3px solid #dddddd; 
     }
+      .product_1{
+        width: 32%;
+        background: pink;
+      }
+       .product_1 img{
+        width: 100%;
+        
+      }
     div::-webkit-scrollbar {display: none;    /* 隐藏滚动条 */}
     .container1{
         width: 80px;
@@ -137,5 +268,6 @@ export default {
      .shopper{
        display: flex;
        justify-content: space-between;
+       border-bottom: 2px solid #cccccc
      }
 </style>

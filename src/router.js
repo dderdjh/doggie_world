@@ -9,6 +9,7 @@ import Mine from "./components/common/Mine.vue"
 import Store from "./components/common/Store.vue"
 import Product from "./components/common/Product.vue"
 import Rate from "./components/common/Rate.vue"
+import Share from "./components/common/Share.vue"
 
 
 
@@ -25,6 +26,7 @@ export default new Router({
     {path:`/Store`,component:Store},
     {path:`/product`,component:Product},
     {path:`/Rate`,component:Rate},
+    {path:`/Share`,component:Share},
     {
       path: '/',
       name: 'home',

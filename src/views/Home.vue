@@ -65,6 +65,8 @@ import Shopperpage from "../components/Shopperpage"
 import Mepage from "../components/Mepage"
 import Messagepage from "../components/Messagepage"
 import TabBarIcon from "../components/common/TabBarIcon";
+
+
 export default {
   data() {
     return {
@@ -96,7 +98,8 @@ export default {
     mepage:Mepage,
     shopmallpage:Shop_mallpage,
     messagepage:Messagepage,
-    tabbaricon: TabBarIcon
+    tabbaricon: TabBarIcon,
+    
   }
 };
 </script>
