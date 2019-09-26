@@ -12,7 +12,7 @@ var pool = mysql.createPool({
   password: "",
   port: "3306",
   connectionLimit: 20,
-  database: "dw"
+  database: "pet"
 });
 
 //监听web服务器8080端口
