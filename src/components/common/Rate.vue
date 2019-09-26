@@ -1,53 +1,33 @@
 <template>
-  <div class="rate" :class="{'disabled':disabled}">
-    <i v-for="i in 5" class="iconfont" @mouseenter="disabled?'':curScore=i" @mouseleave="disabled?'':curScore=''" @click="disabled?'':setScore(i)" :class="getClass(i)">
-      <i v-if="disabled&&i==Math.floor(score)+1" class="iconfont icon-star" :style="'width:'+width"></i>
-    </i>
-    <span v-if="showText" class="text">{{curScore||score}}分</span>
+  <div class="comment">
+    <div>
+      <ul class="score">
+        <li><img src="../../assets/img/full_star.png" alt=""></li>
+        <li><img src="../../assets/img/full_star.png" alt=""></li>
+        <li><img src="../../assets/img/empty_star.png" alt=""></li>
+        <li><img src="../../assets/img/empty_star.png" alt=""></li>
+        <li><img src="../../assets/img/empty_star.png" alt=""></li>
+      </ul>
+    </div>
+    <p style="color:orange"><strong>4.5</strong></p>
+    <p>好评数</p>
   </div>
 </template>
-
-<script>
-  export default {
-    name:'MyRate',
-    props: {
-      score: {
-        type: Number,
-        default: 0,
-        //required: true
-      },
-      disabled: {
-        type: Boolean,
-        default: false,
-      },
-      showText: {
-        type: Boolean,
-        default: false,
-      },
-    },
-    data() {
-      return {
-        curScore: '',
-        width:'',
-      }
-    },
-    created: function () {
-      this.getDecimal();
-    },
-    methods: {
-      getClass(i) {
-        if (this.curScore === '') {
-          return i <= this.score ? 'icon-star' : 'icon-star-o'
-        } else {
-          return i <= this.curScore ? 'icon-star' : 'icon-star-o'
-        }
-      },
-      getDecimal() {
-        this.width=Number(this.score * 100 - Math.floor(this.score) * 100)+'%';
-      },
-      setScore(i){
-        this.$emit('update:score',i);//使用`.sync`修饰符，对score 进行“双向绑定
-      }
-    }
+<style scoped>
+  .score{
+    list-style: none;
+    margin:0;
+    padding: 0;
   }
-</script>
+  .score li{
+    display: inline-block;
+    
+  }
+  .score li img{
+    width: 20px;
+    height: 20px;
+  }
+  .comment p{
+    text-indent: 62%
+  }
+</style>

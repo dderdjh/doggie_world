@@ -47,10 +47,40 @@
         <span>广东广州天河区天河</span>
         <span>在售244只 担保交易68只</span>
       </div>
-      <div></div>
+      <div>
+        <rate></rate>
+      </div>
+    </div>
+    <div class="shopper">
+      <div class="product_1">
+          <img src="../../assets/img/push.png" alt=""><br>
+          <span><strong>金毛</strong></span><br>
+          <span>￥1500</span>
+          <span style="margin-left:8%;">23天前</span>
+      </div>
+      <div class="product_1">
+          <img src="../../assets/img/push.png" alt=""><br>
+          <span><strong>金毛</strong></span><br>
+          <span>￥1500</span>
+          <span style="margin-left:8%;">23天前</span>
+      </div>
+      <div class="product_1">
+          <img src="../../assets/img/push.png" alt=""><br>
+          <span><strong>金毛</strong></span><br>
+          <span>￥1500</span>
+          <span style="margin-left:8%;">23天前</span>
+      </div>
     </div>
   </div>
 </template>
+<script>
+import Rate from "./Rate"
+export default {
+  components:{
+    "rate":Rate
+  }
+}
+</script>
 <style scoped>
     .title1{
         clear: both;
@@ -63,7 +93,7 @@
     .container{
       width: 100%;
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       overflow: hidden;
       overflow: auto;
       border-bottom: 3px solid #dddddd;
@@ -87,8 +117,8 @@
     }
     .profile-img{
         clear: both;
-        width: 40px;
-        height: 40px;
+        width: 50px;
+        height: 50px;
         border-radius: 50%;
         overflow: hidden;
         background: pink;
@@ -97,10 +127,15 @@
     }
     .products{
       display: flex;
+      justify-content: space-between;
       font-size: 12px; 
     }
      .products span{
        display: block;
        margin-top: 8px;
+     }
+     .shopper{
+       display: flex;
+       justify-content: space-between;
      }
 </style>
