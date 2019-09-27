@@ -9,7 +9,11 @@ import Mine from "./components/common/Mine.vue"
 import Store from "./components/common/Store.vue"
 import Product from "./components/common/Product.vue"
 import Rate from "./components/common/Rate.vue"
+<<<<<<< HEAD
 import Share from "./components/common/Share.vue"
+=======
+import Commodity from "./components/Commodity.vue"
+>>>>>>> 0f46a7127039c4fc7e7bb1afbb89d4229cd19709
 
 
 
@@ -41,7 +45,11 @@ export default new Router({
       path: "/Swipe",
       name: "swipe",
       component: Swipe
-    }
-    
+    },
+    {
+      path:"/Commodity",
+      name:"commodity",
+      component:Commodity
+    },
   ]
 })

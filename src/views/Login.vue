@@ -1,9 +1,9 @@
 <template>
-	<div id="app">			
+	<div id="Login">			
 		<div v-if="cut_lg==1" >
 			<!-- 快捷登陆页面 -->
 			<div class="quick_login">
-				<img src="../assets/img/common_back.png" @click="back">
+				<img src="../assets/img/common_back.png" @touchend="back">
 				<h3>快捷登陆</h3>
 			</div>	
 			<div class="login_verify">
@@ -24,6 +24,7 @@
 			<div class="id_login">
 				<p class="left" @touchend="cut_login">用账号密码登陆</p>
 				<p class="right"  @touchend="verify_hint">获取不到验证码?</p>
+
 			</div>
 			<button class="Free_login" type="button">免注册登陆</button>
 		</div>
@@ -63,7 +64,7 @@
 				<div class="code_input">
 					验证码 :
 					<input type="text" placeholder="请输入验证码"/>
-					<a href="" @touchend="get_auth_code" v-if="code">获取验证码</a>
+					<a href="javascript:;" @touchend="get_auth_code" v-if="code">获取验证码</a>
 					<a href="javascript:;" v-else>{{timer}}s后重新获取</a>
 				</div>
 				
@@ -304,6 +305,7 @@
 		overflow: hidden;
 		margin: 0;
 		padding: 0;
+		z-index: 100;
 	}
 	.not_get_verify div{
 		text-align: center;
