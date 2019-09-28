@@ -160,8 +160,11 @@
 					this.err_hint = true
 				}
 				
+			},
+			login(){
+				
 			}
-
+			
 		}
 	}
 </script>

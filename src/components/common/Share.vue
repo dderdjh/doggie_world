@@ -4,7 +4,7 @@
       style="width:80px;height:15px">
     <div class="navibar_box">
       <div class="navibar_list" :class="{navibar_top:animate}">
-        <p v-for="(item,index) in navibarList">{{item.name}}</p>
+        <p v-for="(item,index) in navibarList" :key="index">{{item.name}}</p>
       </div>
     </div>
     <a class="loadmore" href="">更多&gt;</a>
